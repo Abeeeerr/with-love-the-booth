@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f2ede3;
+  --color-paper: #f7f1e5;
+  --color-crimson: #9b0b12;
+  --color-crimson-dark: #7c080e;
+  --color-ink: #1a1714;
+  --color-curtain: #4f7a63;
+  --color-curtain-dark: #3a5c49;
+  --color-booth: #e3d5c3;
+  --font-mono: "Courier Prime", ui-monospace, "SF Mono", monospace;
+}
+
+.font-script {
+  font-family: "Mrs Saint Delafield", cursive;
+}
+
+/* grainy paper feel */
+.paper-texture {
+  background-image: radial-gradient(
+      rgba(26, 23, 20, 0.035) 1px,
+      transparent 1px
+    ),
+    radial-gradient(rgba(26, 23, 20, 0.025) 1px, transparent 1px);
+  background-size: 7px 7px, 11px 11px;
+  background-position: 0 0, 4px 6px;
+}
+
+@keyframes pop-number {
+  0% {
+    transform: scale(0.2) rotate(-6deg);
+    opacity: 0;
+  }
+  55% {
+    transform: scale(1.18) rotate(2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flash-fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes print-down {
+  from {
+    transform: translateY(-101%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes camera-judder {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-1.5px) rotate(-0.4deg);
+  }
+  75% {
+    transform: translateY(1.5px) rotate(0.4deg);
+  }
+}
+
+@keyframes strip-into-envelope {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(285px);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-1.2deg);
+  }
+  50% {
+    transform: rotate(1.2deg);
+  }
+}

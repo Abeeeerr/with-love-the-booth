@@ -53,8 +53,8 @@ export default function Landing({ onEnter }) {
         <HangingPolaroids />
       </div>
 
-      <h1 className="font-script text-7xl md:text-9xl text-ink mt-20 select-none">
-        Photobooth
+      <h1 className="font-script text-5xl md:text-8xl text-ink mt-20 select-none text-center">
+        with love, the booth
       </h1>
       <div className="w-56 border-b-2 border-dashed border-ink/60 mt-2" />
 

@@ -70,8 +70,13 @@ export async function composeStrip(shots, filterCss, caption) {
   const footerTop = TOP + FRAME * 3 + GAP * 2
   ctx.fillStyle = '#f2ede3'
   ctx.textAlign = 'center'
-  ctx.font = '110px "Mrs Saint Delafield", cursive'
-  ctx.fillText(caption || 'Photobooth', STRIP_WIDTH / 2, footerTop + 150)
+  const text = caption || 'with love, the booth'
+  let size = 100
+  do {
+    ctx.font = `${size}px "Mrs Saint Delafield", cursive`
+    size -= 4
+  } while (ctx.measureText(text).width > FRAME - 40 && size > 40)
+  ctx.fillText(text, STRIP_WIDTH / 2, footerTop + 150)
   const date = new Date().toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',

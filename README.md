@@ -1,4 +1,4 @@
-# Photobooth
+# with love, the booth
 
 A cozy, vintage-darkroom photobooth that runs entirely in the browser. Strike a pose (or three), watch the strip print, and take your memories home in a ribbon-tied envelope.
 
